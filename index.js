@@ -7,6 +7,7 @@ var calculated=false;
 var isLastDataOperator=false;
 buttons.forEach(button=>{
     button.addEventListener("click",()=>{
+        console.log(button.classList);
         if(isLastDataOperator==true&&button.classList.contains("operator")){
             hesapla.pop();
             let mevcutekran=document.getElementById("icekran").innerHTML;
@@ -54,7 +55,6 @@ buttons.forEach(button=>{
                 const value=Number(currentvalue);
                 hesapla.push(value);
             }
-            console.log(hesapla);
             carpma_bolme();
             currentvalue="";
             isLastDataOperator=false;
@@ -108,10 +108,7 @@ buttons.forEach(button=>{
             }
                 }
             }
-            //calculated=false;
         }
-        console.log(hesapla);
-        // isLastDataOperator=false;
     });
 });
 
